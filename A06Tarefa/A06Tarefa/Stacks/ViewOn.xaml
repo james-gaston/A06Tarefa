@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A06Tarefa.Stacks.ViewOn">
+  <ContentView.Content>
+        <StackLayout Orientation="Horizontal" Spacing="15">
+            <Image VerticalOptions="Center" Source="{OnPlatform Default='CheckOn.png', UWP='Resources/CheckOn.png'}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CheckTap"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <StackLayout Spacing="0" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <Label x:Name="lblName" Text="Task Name" TextColor="#CCCCCC"/>
+                <Label x:Name="lblTime" Text="Finalizado em dd/MM/yyyy HH:mm" TextColor="#CCCCCC" FontSize="10"/>
+            </StackLayout>
+            <Image VerticalOptions="Center" x:Name="imgP"/>
+            <Image VerticalOptions="Center" x:Name="Delete" Source="{OnPlatform Default='Delete.png', UWP='Resources/Delete.png'}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="DeletarTap"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

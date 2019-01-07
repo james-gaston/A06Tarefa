@@ -148,6 +148,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -156,5 +159,29 @@
       <Project>{49A3C264-AF4A-46EC-8C73-E8DC31E5090B}</Project>
       <Name>A06Tarefa</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\p3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\p4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AddBotao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CheckOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CheckOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Delete.png" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A06Tarefa.Telas.Inicio"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout BackgroundColor="Blue" HeightRequest="250">
+                <Label Text="Meu Dia" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                <Label x:Name="DataHoje" Text="DiaDaSemana, dd/MM/yyyy" HorizontalOptions="Start" VerticalOptions="End" TextColor="White"/>
+            </StackLayout>
+
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
+                <StackLayout x:Name="SLTarefas" Padding="10" Spacing="10">
+
+                </StackLayout>
+            </ScrollView>
+            <Button BackgroundColor="Transparent" Image="{OnPlatform Default='AddBotao.png', UWP='Resources/AddBotao.png'}" HorizontalOptions="Center" Clicked="GoCadastro"/>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

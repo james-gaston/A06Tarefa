@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A06Tarefa.Telas.Cadastro">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Nome" FontAttributes="Bold"/>
+            <Entry x:Name="txtNome"/>
+            <Label Text="Prioridade" FontAttributes="Bold"/>
+            <StackLayout x:Name="SLPrioridades">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="{OnPlatform Default='p4.png', UWP='Resources/p4.png'}"/>
+                    <Label TextColor="Gray" Text="Urgente e Importante" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" CommandParameter="4"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="{OnPlatform Default='p3.png', UWP='Resources/p3.png'}"/>
+                    <Label TextColor="Gray" Text="Urgente e Não Importante" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" CommandParameter="3"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="{OnPlatform Default='p2.png', UWP='Resources/p2.png'}"/>
+                    <Label TextColor="Gray" Text="Não Urgente e Importante" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" CommandParameter="2"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="{OnPlatform Default='p1.png', UWP='Resources/p1.png'}"/>
+                    <Label TextColor="Gray" Text="Não Urgente e Não Importante" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" CommandParameter="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+
+            <Button Clicked="Salvar" Text="OK" TextColor="White" BackgroundColor="Blue" HorizontalOptions="End"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
